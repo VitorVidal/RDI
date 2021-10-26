@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:WebAPI.Controllers.CardController.GenerateToken(Application.DTOs.receiveCardRequest)">
+            <summary>
+            Generate a token for cashless registration.
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="customerCard">Schema receiveCardRequest</param>
+            <returns>Token</returns>
+            <response code="200">Returns the token</response>
+            <response code="400">If the any of the customerCard properties are null or invalid.</response>       
+        </member>
+        <member name="M:WebAPI.Controllers.CardController.ValidateToken(Application.DTOs.validateTokenRequest)">
+            <summary>
+            Validate that token based on data provided.
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="token">Schema validateTokenRequest</param>
+            <returns>A boolean indicating that the token is valid or not </returns>
+            <response code="200">returns true or false.</response>
+            <response code="400">If the any of the token properties are null or invalid.</response>
+        </member>
+        <member name="T:WebAPI.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:WebAPI.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:WebAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
